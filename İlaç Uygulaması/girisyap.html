@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlaçJet</title>
+    <link rel="stylesheet" href ="giriskayıtform.css"
+</head>
+<body>
+
+    <section class ="wrapper"> 
+        <div class = "fore signup">
+            <header>Üye Ol</header>
+        <form action="#">
+            <input type = "text" placeholder ="Adınız" required>
+            <input type = "text" placeholder ="Email" required>
+            <input type = "password" placeholder ="Şifre" required>
+            
+            <div class = "checkbox">
+                <input type = "checkbox" id="signupcheckbox">
+                <label form= "signupcheckbox">Tüm şartlar ve koşulları kabul ediyorum.</label>
+
+            </div>
+            <input type = "submit" value="Üye Ol">
+        
+        </form>
+        </div>
+
+        <div class="form login">
+            <header>Giriş Yap</header>
+            <form action="#">
+                <input type = "text" placeholder ="Email" required>
+                <input type = "password" placeholder ="Şifre" required>
+            <a href = "#">Şifrenizi mi unuttunuz ?</a>       
+         
+                <input type = "submit" value="Giriş Yap">
+            
+            </form>
+
+        </div>
+
+    </section>
+    
+    <script>
+        const wrapper = document.querySelector(".wrapper"),
+        signupheader = document.querySelector(".signup header"),
+        loginheader = document.querySelector(".login header");
+
+        loginheader.addEventListener("click", () =>{
+            wrapper.classList.add("active");
+        })
+
+        signupheader.addEventListener("click", () =>{
+            wrapper.classList.remove("active");
+        })
+    </script>
+
+</body>
+</html>
